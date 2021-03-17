@@ -46,6 +46,11 @@ main{
     border-bottom: 2px solid #BB86FC;
     cursor: pointer;
     margin-bottom: 20px;
+    transition: ease-in-out 0.2;
+}
+
+.sideBar h1:hover{
+    letter-spacing: 1px;
 }
 
 .sideBar img{
@@ -78,11 +83,35 @@ main{
     letter-spacing: 2px;
 }
 
-.headButtons{
-    width: 90%;
+#subButton{ 
+    border: none;
+    color: white;
+    background: #b281ee;
+    width: 96%;
+    margin-right: 4%;
     height: 3rem;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 5px;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: ease-in-out 0.1s;
+}
+
+#subButton:hover{
+    background: #a576df;
+    transform: translateX(4%);
+    letter-spacing: 2px;
+}
+
+
+
+.pageSpace{
+    width: 90%;
+    min-height: 3rem;
     margin-top: 10px;
-    background: red;
 }
 
 .emojiItem{
