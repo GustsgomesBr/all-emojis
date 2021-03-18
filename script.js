@@ -30,7 +30,8 @@ function showAll(){
 }
 
 function showSelected(sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub10, sub11, sub12){
-    
+    var allEmojis = document.getElementById('allmojis');
+    allEmojis.innerHTML = "Loading..."
     main.innerHTML = "";
     var pageSpace = document.createElement('div');
     pageSpace.className = "pageSpace";
@@ -62,4 +63,5 @@ function showSelected(sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub1
                 emojiDiv.appendChild(emojiName);
             }
         }
+        allEmojis.innerHTML = "ALL-EMOJIS"
 }
