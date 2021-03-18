@@ -67,7 +67,7 @@ main{
     color: white;
     background: #BB86FC;
     width: 100%;
-    height: 3rem;
+    height: 2rem;
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
@@ -83,13 +83,19 @@ main{
     letter-spacing: 2px;
 }
 
+.sideBar input[type=button]:focus{
+    border: 0;
+    background: #a576df;
+    letter-spacing: 2px;
+}
+
 #subButton{ 
     border: none;
     color: white;
     background: #b281ee;
     width: 96%;
     margin-right: 4%;
-    height: 3rem;
+    height: 2rem;
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
@@ -103,6 +109,12 @@ main{
 #subButton:hover{
     background: #a576df;
     transform: translateX(4%);
+    letter-spacing: 2px;
+}
+
+#subButton:focus{
+    border: 0;
+    background: #a576df;
     letter-spacing: 2px;
 }
 
