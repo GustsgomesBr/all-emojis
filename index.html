@@ -10,17 +10,31 @@
 <body>
     <div class="sideBar">
         <img src="logo.png">
-        <h1>ALL-EMOJIS</h1>
-        <input type="button" value="📦 Todos" onclick="showAll()">
-        <input type="button" value="😃 Smileys" onclick="showSelected('face-smiling', 'face-affection', 'face-tongue', 'face-hand', 'face-neutral-skeptical', 'face-sleepy', 'face-unwell', 'face-hat', 'face-glasses', 'face-concerned', 'face-negative')">
-        <input type="button" value="😻 Cat-faces" id="subButton" onclick="showSelected('cat-face')">
-        <input type="button" value="❤️ Emoção" id="subButton" onclick="showSelected('emotion')">
-        <input type="button" value="🤡 Fantasias" id="subButton" onclick="showSelected('face-costume')">
-        <input type="button" value="🙈 Macaco" id="subButton" onclick="showSelected('monkey-face')">
-        <input type="button" value="👨‍🦰 Pessoas">
-        <input type="button" value="👋 Gestos">
-        <input type="button" value="🐻 Animais" onclick="showSelected('animal-mammal')">
-        <input type="button" value="🌱 Natureza">
+        <h1 id="allmojis">ALL-EMOJIS</h1>
+        <div class="menuButtons">
+            <input type="button" value="📦 Todos" onclick="showAll()">
+            <input type="button" value="😃 Smileys" onclick="showSelected('face-smiling', 'face-affection', 'face-tongue', 'face-hand', 'face-neutral-skeptical', 'face-sleepy', 'face-unwell', 'face-hat', 'face-glasses', 'face-concerned', 'face-negative')">
+            <input type="button" value="😻 Cat-faces" id="subButton" onclick="showSelected('cat-face')">
+            <input type="button" value="❤️ Emoção" id="subButton" onclick="showSelected('emotion')">
+            <input type="button" value="🤡 Fantasias" id="subButton" onclick="showSelected('face-costume')">
+            <input type="button" value="🙈 Macaco" id="subButton" onclick="showSelected('monkey-face')">
+            <input type="button" value="🍔 Comidas" onclick="showSelected('food-prepared')">
+            <input type="button" value="🍣 Asiáticas" id="subButton" onclick="showSelected('food-asian')">
+            <input type="button" value="🍺 Bebidas" id="subButton" onclick="showSelected('drink')">
+            <input type="button" value="🍨 Doces" id="subButton" onclick="showSelected('food-sweet')">
+            <input type="button" value="🍇 Frutas" id="subButton" onclick="showSelected('food-fruit')">
+            <input type="button" value="🌽 Vegetais" id="subButton" onclick="showSelected('food-vegetable')">
+            <input type="button" value="🦀 Marítimas" id="subButton" onclick="showSelected('food-marine')">
+            <input type="button" value="🍽️ Louças" id="subButton" onclick="showSelected('dishware')">
+            <input type="button" value="👨‍🦰 Pessoas" onclick="showSelected('person', 'person-gesture', 'person-role', 'person-fantasy', 'person-activity', 'person-sport', 'person-resting', 'family')">
+            <input type="button" value="👋 Gestos" onclick="showSelected('hand-fingers-open', 'hand-fingers-partial', 'hand-single-finger', 'hand-fingers-closed', 'hands', 'hand-prop', 'body-parts')">
+            <input type="button" value="🐻 Animais" onclick="showSelected('animal-mammal', 'animal-bird', 'animal-amphibian', 'animal-reptile', 'animal-marine', 'animal-bug')">
+            <input type="button" value="🌱 Natureza" onclick="showSelected('plant-flower', 'plant-other')">
+            <input type="button" value="🌎 Mundo" onclick="showSelected('place-map')">
+            <input type="button" value="🏔️ Geografia" id="subButton" onclick="showSelected('place-geographic')">
+
+            <div style="margin-top: 30px;"></div>
+        </div>
     </div>
     <main class="main">
     </main>
