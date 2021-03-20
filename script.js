@@ -61,6 +61,18 @@ function showSelected(sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub1
                 main.appendChild(emojiDiv);
                 emojiDiv.appendChild(emoji);
                 emojiDiv.appendChild(emojiName);
+
+                //Problema a ser resolvido: Quando alterada a categoria o index perde o local.
+                emojiDiv.addEventListener("click", function(){
+                    var thisEmote = document.getElementsByClassName("emojiItem")[i].firstChild;
+                    var textArea = document.createElement('textarea');
+                    textArea.value = thisEmote.innerHTML;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy')
+                    document.body.removeChild(textArea);
+                    alert(thisEmote.innerHTML + "Copiado")
+                })
             }
         }
         allEmojis.innerHTML = "ALL-EMOJIS"
