@@ -7,27 +7,12 @@ async function getEmojis(){
         const result = await fetch('https://unpkg.com/emoji.json/emoji.json');
         const data = await result.json();
         emojiData = data
-        showSelected('face-smiling')
-
     } catch (error) {
         alert(error)
     }
+    showSelected('face-smiling')
 }
-getEmojis();
-
-function showAll(){
-    for (let i = 0; i < emojiData.length; i++) {
-        var emojiDiv = document.createElement('div');
-        emojiDiv.className = "emojiItem";
-        var emoji = document.createElement('h1');
-        emoji.innerHTML = emojiData[i].char;
-        var emojiName = document.createElement('h2');
-        emojiName.innerHTML = emojiData[i].name.toUpperCase()
-        main.appendChild(emojiDiv);
-        emojiDiv.appendChild(emoji);
-        emojiDiv.appendChild(emojiName);
-    }
-}
+getEmojis()
 
 function showSelected(sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub10, sub11, sub12){
     var allEmojis = document.getElementById('allmojis');
@@ -38,7 +23,7 @@ function showSelected(sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub1
     main.appendChild(pageSpace);
         for (let i = 0; i < emojiData.length; i++) {
             if(
-                emojiData[i].subgroup === sub1 
+                   emojiData[i].subgroup === sub1 
                 || emojiData[i].subgroup === sub2 
                 || emojiData[i].subgroup === sub3 
                 || emojiData[i].subgroup === sub4 
@@ -51,27 +36,26 @@ function showSelected(sub1, sub2, sub3, sub4, sub5, sub6, sub7, sub8, sub9, sub1
                 || emojiData[i].subgroup === sub11
                 || emojiData[i].subgroup === sub12
                 ){
-
-                var emojiDiv = document.createElement('div');
-                emojiDiv.className = "emojiItem";
-                var emoji = document.createElement('h1');
-                emoji.innerHTML = emojiData[i].char;
-                var emojiName = document.createElement('h2');
-                emojiName.innerHTML = emojiData[i].name.toUpperCase()
-                main.appendChild(emojiDiv);
-                emojiDiv.appendChild(emoji);
-                emojiDiv.appendChild(emojiName);
-
-                //Problema a ser resolvido: Quando alterada a categoria o index perde o local.
+                    var emojiDiv = document.createElement('div');
+                    emojiDiv.className = "emojiItem";
+                    emojiDiv.id = i;
+                    var emoji = document.createElement('h1');
+                    emoji.innerHTML = emojiData[i].char;
+                    var emojiName = document.createElement('h2');
+                    emojiName.innerHTML = emojiData[i].name.toUpperCase()
+                    main.appendChild(emojiDiv);
+                    emojiDiv.appendChild(emoji);
+                    emojiDiv.appendChild(emojiName);
+                    
                 emojiDiv.addEventListener("click", function(){
-                    var thisEmote = document.getElementsByClassName("emojiItem")[i].firstChild;
+                    var thisEmote = document.getElementById(i).firstChild;
                     var textArea = document.createElement('textarea');
                     textArea.value = thisEmote.innerHTML;
                     document.body.appendChild(textArea);
                     textArea.select();
                     document.execCommand('copy')
                     document.body.removeChild(textArea);
-                    alert(thisEmote.innerHTML + "Copiado")
+                    alert(thisEmote.innerHTML + " Copiado")
                 })
             }
         }
