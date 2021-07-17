@@ -2,7 +2,7 @@
 
 Quarto projeto do #100DaysOfCode.
 
-Encontre aqui todos os emojis.
+Encontre e copie Emojis por aqui
 
 ![image](https://user-images.githubusercontent.com/52038436/111714020-1b6a8580-8827-11eb-9078-5f398fbc4ea5.png)
 
